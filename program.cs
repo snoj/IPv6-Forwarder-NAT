@@ -50,7 +50,7 @@ namespace us.snoj.GrowlIPForward {
 			
 			Byte[] receiveBytes = u.EndReceive(ar, ref e);
 			Socket s4 = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-			s4.SendTo(receiveBytes, (EndPoint)new IPEndPoint(IPAddress.Any, 9887));
+			s4.SendTo(receiveBytes, (EndPoint)new IPEndPoint(IPAddress.Parse("127.0.0.1"), 9887));
 		}
 	}
 }
